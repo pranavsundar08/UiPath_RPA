@@ -1,0 +1,680 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Communication_1" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1140,7819.2" sap2010:WorkflowViewState.IdRef="Communication_1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.GSuite.Models</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Api.Google.Gmail.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Filters</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.GSuite.Activities.Enums</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.GSuite.Activities.Calendar.Filters</x:String>
+      <x:String>UiPath.GSuite.Activities.Filters</x:String>
+      <x:String>UiPath.GSuite.Calendar.Enums</x:String>
+      <x:String>UiPath.GSuite.Calendar.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Utilities</x:String>
+      <x:String>UiPath.Shared.Activities.Triggers</x:String>
+      <x:String>UiPath.GSuite.Activities.Calendar.Triggers</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Excel.Activities.Windows.Business</x:String>
+      <x:String>UiPath.Mail.Activities.Business.ForEachMail</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="E-Mail sending after resume sorting process for selected candidates. Extracting the name and Email of the candidate to the excel sheet for the interview process. &#xA;" DisplayName="Resume_Accepted" sap:VirtualizedContainerService.HintSize="880,7754.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Int_date" />
+      <Variable x:TypeArguments="x:String" Name="Locations" />
+      <Variable x:TypeArguments="x:String" Name="MeetLink" />
+      <Variable x:TypeArguments="x:String" Name="OfflineAddress" />
+      <Variable x:TypeArguments="x:String" Name="Desti" />
+      <Variable x:TypeArguments="s:String[]" Name="Files" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\prana\OneDrive\Documents\UiPath\HR_automation\Documents\Filtered_Resumes" Name="FilePath" />
+      <Variable x:TypeArguments="x:String" Name="ExtractMail" />
+      <Variable x:TypeArguments="x:String" Name="Pdf_Data" />
+      <Variable x:TypeArguments="x:String" Name="CandidateName" />
+      <Variable x:TypeArguments="x:String" Name="MailName" />
+      <Variable x:TypeArguments="x:String" Name="Success" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\prana\OneDrive\Documents\UiPath\HR_automation\Documents\Template\Temp" Name="FilepathTemp" />
+      <Variable x:TypeArguments="s:String[]" Name="DeleteFiles" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="In this process activity the Name and Email of the candidate is fetched from the Resume. And Filled in the Excel sheet for the interview process.&#xA;" AttachMode="ByInstance" DisplayName="PART-01 Use Application: Filtered_Resumes" sap:VirtualizedContainerService.HintSize="817.6,2372.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_12" ScopeGuid="bf24fe09-5f2d-4a52-97be-ffa0a7375dde" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="784,1997.6" sap2010:WorkflowViewState.IdRef="Sequence_67">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="721.6,122.4" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[Files]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(FilePath)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="721.6,1787.2" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[Files]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:String">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="688,1596.8" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="KeySkill" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[currentItem]" sap:VirtualizedContainerService.HintSize="625.6,123.2" sap2010:WorkflowViewState.IdRef="ReadPDFText_5" Range="All" Text="[Pdf_Data]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ReadPDFText>
+                    <Assign sap:VirtualizedContainerService.HintSize="625.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[ExtractMail]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(Pdf_Data, "\b[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+.[A-Z|a-z]{2,}\b").Value]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="625.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[CandidateName]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(Pdf_Data,"(^[A-Za-z]+\s*[A-Za-z]+)").Value]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="625.6,92.8" sap2010:WorkflowViewState.IdRef="CommentOut_36">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,197.6" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[ExtractMail]" />
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="625.6,92.8" sap2010:WorkflowViewState.IdRef="CommentOut_37">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,197.6" sap2010:WorkflowViewState.IdRef="Sequence_99">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="433.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[CandidateName]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:MessageBox>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="625.6,958.4" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_9">
+                      <ueab:ExcelProcessScopeX.Body>
+                        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,848.8" sap2010:WorkflowViewState.IdRef="Sequence_88">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,762.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" WorkbookPath="Documents\Interview_Details1.xlsx">
+                              <ueab:ExcelApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,469.6" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Resumes_Selected&quot;).Cell(&quot;B2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,200" sap2010:WorkflowViewState.IdRef="WriteCellX_15" Value="[CandidateName]" />
+                                    <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Resumes_Selected&quot;).Cell(&quot;C2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,183.2" sap2010:WorkflowViewState.IdRef="WriteCellX_16" Value="[ExtractMail]" />
+                                  </Sequence>
+                                </ActivityAction>
+                              </ueab:ExcelApplicationCard.Body>
+                            </ueab:ExcelApplicationCard>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelProcessScopeX.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:ExcelProcessScopeX>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 1920, 1020" Arguments="c:\users\prana\onedrive\documents\uipath\hr_automation\documents\filtered_resumes" FilePath="C:\Windows\explorer.exe" IconBase64="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" InformativeScreenshot="1df727680afab46740466dc6d87575cf.png" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='Filtered_Resumes' /&gt;" Title="Filtered_Resumes" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="To get the input like location and Date for the interview.&#xA;" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="817.6,341.6" sap2010:WorkflowViewState.IdRef="InputDialog_12" IsPassword="False" Label="Interview Date in dd/mm/yyyy format" Title="Interview Date">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[Int_date]</OutArgument>
+      </ui:InputDialog.Result>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InputDialog>
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="817.6,335.2" sap2010:WorkflowViewState.IdRef="InputDialog_13" IsPassword="False" Label="Interview Location" OptionsString="Online;Offline" Title="Interview Location">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[Locations]</OutArgument>
+      </ui:InputDialog.Result>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InputDialog>
+    <If Condition="[Locations=&quot;Online&quot;]" sap:VirtualizedContainerService.HintSize="817.6,1547.2" sap2010:WorkflowViewState.IdRef="If_8">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,1084.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Google Meet" sap:VirtualizedContainerService.HintSize="449.6,998.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="a3a38b6e-566d-4e89-a18b-05284ff0f1f0" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,758.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0.5" DisplayName="Click 'Meet'" sap:VirtualizedContainerService.HintSize="353.6,197.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3a38b6e-566d-4e89-a18b-05284ff0f1f0" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://meet.google.com/" CvTextArea="146, 703, 130, 25" CvTextArgument="New meeting" CvType="Text" DesignTimeRectangle="102, 685, 193, 60" DesignTimeScaleFactor="1.25" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl class='VfPpkd-RLmnJb' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='VfPpkd-RLmnJb' tag='DIV' type='' aaname='' /&gt;" Guid="3cc7ce3f-08c7-4465-885d-a75a0f55c193" InformativeScreenshot="5e37853cf7a046b74aa7a2dfe996fe0b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Google Meet' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="94, 162, 167, 36" CvTextArgument="Google Meet" CvType="Text" DesignTimeRectangle="39, 157, 222, 50" ElementType="Text" FriendlyName="'Meet'" FullSelectorArgument="&lt;webctrl id='sdgBod' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sdgBod' tag='A' type='' class='gb_8d gb_Ic' aaname='Meet' check:innerText='Meet' /&gt;" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="3" DisplayName="Click 'Video calls'" sap:VirtualizedContainerService.HintSize="353.6,197.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a3a38b6e-566d-4e89-a18b-05284ff0f1f0" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://meet.google.com/" CvTextArea="190, 698, 231, 20" CvTextArgument="Create a meeting for later" CvType="Text" DesignTimeRectangle="102, 680, 368, 60" DesignTimeScaleFactor="1.25" ElementType="ListItem" FriendlyName="'linkCreate a'" FullSelectorArgument="&lt;webctrl aria-label='Create a meeting for later' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Create a meeting for later' tag='LI' type='' class=' VfPpkd-StrnGf-rymPhb-ibnC6b' aaname='' check:innerText='link&amp;#xD;&amp;#xA;Create a meeting for later' /&gt;" Guid="caaf109b-0857-4bb0-9aa6-4ab652f95202" InformativeScreenshot="6651425a3ec0a86facfd510c419d06c9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Google Meet' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="102, 393, 700, 158" ElementType="Text" FriendlyName="'Video calls'" FullSelectorArgument="&lt;webctrl class='YpQfNc' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='YpQfNc' tag='DIV' type='' aaname='Video calls and meetings for everyone' check:innerText='Video calls and meetings for everyone' /&gt;" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NGetText DisplayName="Get Text 'Here's your'" sap:VirtualizedContainerService.HintSize="353.6,197.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="a3a38b6e-566d-4e89-a18b-05284ff0f1f0" TextString="[MeetLink]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://meet.google.com/" DesignTimeRectangle="1094, 619, 30, 30" DesignTimeScaleFactor="1.25" FriendlyName="'content_copy'" FullSelectorArgument="&lt;webctrl aaname='content_copy' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='I' type='' class='google-material-icons VfPpkd-kBDsod' /&gt;" Guid="f10e6a5a-2937-44ce-a87d-8216d67e0022" InformativeScreenshot="62b5dd14d50cfe08e8ed38d2e49d82f6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Google Meet' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CvTextArea="748, 470, 289, 18" CvTextArgument="Here's your joining information" CvType="Text" DesignTimeRectangle="749, 468, 289, 25" ElementType="Text" FriendlyName="'Here's your'" FullSelectorArgument="&lt;webctrl parentid='c0' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='c0' tag='SPAN' type='' class='' aaname='Here&amp;apos;s your joining information' check:innerText='Here&amp;apos;s your joining information' /&gt;" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,77.6" sap2010:WorkflowViewState.IdRef="CommentOut_18">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,197.6" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[MeetLink]" />
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJWSURBVFhHYxgFowAfeOVibPN9Fc+RP3uY75OMdzPf/r2bpf//fgYOqHGkAZDlr5zNPv9Yxvvy9x6W/+RioGPioUYSD2CWv3I2/f99Af9PbAYTi4EOmA81ljiAbDnYAfMEsBpMLEZ2gPaqUB6TFUHLTVYEnzdZHuIAFUYAdMuhDviLzWBiMcwB5kuCZIAWnwbi/yBsvCIYNWSwWQ52wFK+t9gMJhaDHGC0IsgCaOlzmOUYDtgame961i/s6zm/kP/o+MsKodNAQ7CndCSMzXIQ3rdJci3Qwt/IlmM4wKn1a71T65f/WHHL51CoMrwA3eJfe1j+dM+XfaUy2eUSuuU0d8DnXWx/wido/pdosPivPNHlGV0dcH8r1y/rTgOw5WAHTHD6RTcHnNvA/16r1QRuOQgr9TthWE4TB+xZLXRDptEcxXK6OkBjuscldMvp6gCQodqzvZ5LNg6gA0BYd77vF8lmS4QDJjj9QbYYhmnmABA2XBLwTabNBuwA5QnOr5HlYJimDgBbsCzwo1y33WeVSS7X0eXA8sgOkMu+Ua6Qc/0/Jr7xw2BWwTaghv1EYAxLgPi37gK/jVjEUR0gkXa5XjL90n9sWH9O1itsBhCLQRaZrAyqxyYOtR6/A/RmFmJNRMRimEWmy4PCgfzv6OJggM8BujOKMQwlBSNbZLwq1AYoBquWJ0OF6RMCMGCxPEABFCUgGioEcsDFeGyWg7DBnOw32AwmGi8PzoZagxsoJNznAFq2Goh/I1sOwoYLkm5hNZgwBjVC1husDxCAWjMKRgEWwMAAACcjGyqm6EQGAAAAAElFTkSuQmCC" InformativeScreenshot="03a41fe0c33a017863d9dd2be0d5935a.jpg" Selector="&lt;html app='msedge.exe' title='Google Meet' /&gt;" Title="Google Meet" Url="https://meet.google.com/" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,284" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[OfflineAddress]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">St. Joseph's College of Engineering, Chennai 600119</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="433.6,76" sap2010:WorkflowViewState.IdRef="CommentOut_19">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,197.6" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[OfflineAddress]" />
+              </Sequence>
+            </ui:CommentOut.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:CommentOut>
+        </Sequence>
+      </If.Else>
+    </If>
+    <p:WordApplicationScope sap2010:Annotation.AnnotationText="Based on the inputs from the above input dialogue boxes the words from the MS Word document will be replaced." DisplayName="PART-02 Word Application Scope for Mail format" FilePath="C:\Users\prana\OneDrive\Documents\UiPath\HR_automation\Documents\Template\Email_Round1_Success.docx" sap:VirtualizedContainerService.HintSize="817.6,1762.4" sap2010:WorkflowViewState.IdRef="WordApplicationScope_7">
+      <p:WordApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WordDocument">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,1541.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:WordSaveAs DisplayName="Save Document As" FilePath="C:\Users\prana\OneDrive\Documents\UiPath\HR_automation\Documents\Template\Temp\temp.docx" sap:VirtualizedContainerService.HintSize="529.6,209.6" sap2010:WorkflowViewState.IdRef="WordSaveAs_1" />
+            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="529.6,204.8" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="[Int_date]" ReplaceAll="True" Search="%[Insert Date]" />
+            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="529.6,204.8" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" Replace="[Locations]" ReplaceAll="True" Search="%[Insert Loca/Platform Details]" />
+            <p:WordReadText DisplayName="Read Text" sap:VirtualizedContainerService.HintSize="529.6,125.6" sap2010:WorkflowViewState.IdRef="WordReadText_3" Text="[Success]" />
+            <If Condition="[Success.ToString.Contains(&quot;Offline&quot;)]" sap:VirtualizedContainerService.HintSize="529.6,710.4" sap2010:WorkflowViewState.IdRef="If_4">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,274.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="433.6,188" sap2010:WorkflowViewState.IdRef="WordReplaceText_5" Replace="[OfflineAddress]" ReplaceAll="True" Search="Offline" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,274.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="433.6,188" sap2010:WorkflowViewState.IdRef="WordReplaceText_6" Replace="[MeetLink]" ReplaceAll="True" Search="Online" />
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </p:WordApplicationScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </p:WordApplicationScope>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Through Outlook mail the mail is sent to the respective mail id's. The mail id is retrived from the excel sheet and the word format is retrived from the already created MS word file located in the Temp directory. The reason for not selecting the Gmail was it does not support the Word Document feature in the send mail activity." DisplayName="PART-03 Excel Process Scope for E-mail sequence" sap:VirtualizedContainerService.HintSize="817.6,296.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_12">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="784,1481.6" sap2010:WorkflowViewState.IdRef="Sequence_37">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="721.6,1395.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="Documents\Interview_Details1.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,1102.4" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="625.6,1016" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Resumes_Selected&quot;).Range(&quot;C:C&quot;)]" SaveAfterEachRow="True">
+                      <ueab:ExcelForEachRowX.Body>
+                        <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                          <ActivityAction.Argument1>
+                            <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                          </ActivityAction.Argument1>
+                          <ActivityAction.Argument2>
+                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                          </ActivityAction.Argument2>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,800" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <umab:OutlookApplicationCard Account="pranavsundar08@outlook.com" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="529.6,713.6" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_2">
+                              <umab:OutlookApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,507.2" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" Body="[Success]" BodyDocumentPath="Documents\Template\Temp\temp.docx" BodyType="WordDocument" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,420.8" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Invitation for Interview: Your Selection to the Next Round" To="[CurrentRow.ByField(&quot;E-Mail address&quot;)]" UseDocumentAsBody="False">
+                                      <umab:SendMailX.Files>
+                                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                          <InArgument x:TypeArguments="x:String">Documents\Template\Documents_required.docx</InArgument>
+                                        </scg:List>
+                                      </umab:SendMailX.Files>
+                                      <umab:SendMailX.HtmlBodyFromFile>
+                                        <umabh:HtmlContentArgument FilePath="{x:Null}">
+                                          <umabh:HtmlContentArgument.RuntimeImages>
+                                            <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                          </umabh:HtmlContentArgument.RuntimeImages>
+                                          <umabh:HtmlContentArgument.ValueMappings>
+                                            <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                          </umabh:HtmlContentArgument.ValueMappings>
+                                        </umabh:HtmlContentArgument>
+                                      </umab:SendMailX.HtmlBodyFromFile>
+                                    </umab:SendMailX>
+                                  </Sequence>
+                                </ActivityAction>
+                              </umab:OutlookApplicationCard.Body>
+                            </umab:OutlookApplicationCard>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelForEachRowX.Body>
+                    </ueab:ExcelForEachRowX>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelProcessScopeX>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="To delete the files present in the temp directory.&#xA;" AttachMode="ByInstance" DisplayName="Use Application: Temp" sap:VirtualizedContainerService.HintSize="817.6,949.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" ScopeGuid="509c36db-b2fa-429d-812b-336856b571bd" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,591.2" sap2010:WorkflowViewState.IdRef="Sequence_100">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="Assign_9">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[DeleteFiles]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(FilepathTemp)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="449.6,380.8" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[DeleteFiles]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:String">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,190.4" sap2010:WorkflowViewState.IdRef="Sequence_101">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="353.6,104" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[currentItem]" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" Arguments="c:\users\prana\onedrive\documents\uipath\hr_automation\documents\template\temp" FilePath="C:\Windows\explorer.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAW/SURBVFhH7ZfZc1RFGMX5D/SFkpkhYV+HsvTFshRFcUFR3EVUFPcFkcV93/cN912xDEowIgSzh+iDVZYFAgkhgZBAlgkBBBIJBMnWx/P17Z70THqo+BCfpqtO9b23Krm/Oud8fWuGpFd6pdcAV2fx0FNQdtJmSqlfhqG3jOLeUxbidQg960LoKg2p7nVhdJYOa+X1Mqw+4UTz54O/UDa0Xv06DHE4LYJphdFVElbdpWGIOovDqqskwmeRzf8bZB+YgaJj3VoGjnt3aQTHCNdJOK3i4finNLzU/IvBXRaumzEKXI8GknsNaGTBBJRwRcO5Z+BYUWSx+TeDt+gWIww61lUqLkmkEmMARgg+EyANpgRO1FGQwetMHC3MwNGCDBzJz1AdBZl8PgKH8zJVe94IdTif1/kjcejnkbzXOw6tHcV9FNpyR6m/c2UfjdY1o9XB3DFt3BcZrL4lMR4rCvNlYb4srDoKuReE0VEY4csifHGEL4rwRaLhaM/L4Mu4l5ysemqfB/Z8A7QsA3Z/SX0ONH8CxD6kPgCa3gMa36Heot4AGl4F6l8Cdr1IPQfsfJp6Cqh7HKpmCTp+m9FmsPrWkcIQ9ueG0PJjCM05YRVbGQalmrg3ZYsiikKjaEUEsZyxOPT7HPQ2vE+YjwnxNl/8OvWaAXjFQLxgJCDPBKp7knpCA6H2UeoR6mFgx4PUA1DVC2Cw+lb7+nno3bcGOFhEFVD5wIG1IDXw12pqFbAvh8oG9q6gsujYV3RI3KErjQJHsAYDVi/uWLBnDZy4ZOBqH+sHhh1LgJpFwPaF/QG7Y18zJqrlC0b0GfVpEFPzRyYqOtX0LrWUcuLSkVnXXnZcI9guC8YIBwJWs5BwC4Bt8/sDYo/0h90ROIlMy3RIXNJwAsYoG98kkAdMu8Y+umA7PXHucOBqFhuw+6n7CHcvdY8HUIM5jjULmOuagNE1DWbi1D0TuKQ4d9k4LZhx7Xhg2+drMFTfRd3pAdSOCZxxLGYcs2A6SjsEDli9B8y6NsA4A9fu1mCovh2ous0DmLJnjNPXMw3GOOMDkCrOhwycgBnXasQ1ARMJmLh2hwZD1a3UPB+gp2cJYO50Ss/ssZECLME1F0x65saZCIatN1NzPYBuz1LFqXtmh8AergJHsDpfz3xxEiwpTlTdEoBVzqVuoK73AMbjTAbzHRvJPRPXBEzitD1zhsD2rNqJs9oB23oTdWMAt2UONdsH6OlZ3DE3TjOdAlbn65njWKo4NZzESbBKA1YpYNdR1wIVV3sAj9sz45oGS+6ZOCZximPyFfD1jHFWSZzs2VbTMyfOAGy2BkPFVdSVHkALZo8NN07bM+959h975onTuiZgKL8c2DzLA5gwAC6YTKfTs1rTMwvG72YQp+2ZOOZOp4A5cW4Rx0ycFdckgV1GXUrN9AGm6FnCeWYGwB4bSZ+nRDDn2EiI03WMcZZfQRGsfBbBLgE2XUxd5AFMAHMPWjfO5J4ZsIQ4BUxckygJpuO0PSPYFnHNggVxBmAzNRg2XQhsvMADqKO0YCZOL5iNU8DMAPh6pqfTHYCkOMU1E2fg2gwNho3nAX9O9wGaAYiDJR0b8hXYZl3znWe+Y0PiTNUzG6eAiWvnU9OBDecQcJoHUMfpgpmexT9PbpxOz+LHhgVL1TM3TgOm4xQwce1cwk2jzgbWT+0PqGQaBxynGYAqX5wCZnqmXRPHEgcggOuLUxzTYBumEu4M9P5xen9A+aGiqgkT/wqYYyM+AOKaGQA9nTKZyXG655mZznjPDJjuGV3TYIxTg51FsDMN3Gk4kHdq/x9NrWvGLtq/akzbgZ/GYr/WOP4M4b5K9nHYmzNe7csZjz0/yD6B9xN4LZqotTt7gtqdPVG1rJzE60Cx7yepJqp5xWTEqMbvJvM+ioblk1XD8qhqXB7lsymo/zbK+yl8TmVF2+qzooP/Ozu90iu90kvWkCH/AjjjeQoULhj7AAAAAElFTkSuQmCC" InformativeScreenshot="0d2b6eff496b82ea23dabe53f25e264b.png" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='Temp' /&gt;" Title="Temp" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

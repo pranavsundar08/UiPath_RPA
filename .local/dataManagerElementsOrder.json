@@ -1,0 +1,126 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Selection1_Success(1).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DeleteFiles&Sequence_7",
+        "FilepathTemp&Sequence_7",
+        "KeySkill&Sequence_66",
+        "Success&Sequence_7",
+        "MailName&Sequence_7",
+        "CandidateName&Sequence_7",
+        "Pdf_Data&Sequence_7",
+        "Int_date&Sequence_7",
+        "Locations&Sequence_7",
+        "MeetLink&Sequence_7",
+        "OfflineAddress&Sequence_7",
+        "Desti&Sequence_7",
+        "Files&Sequence_7",
+        "FilePath&Sequence_7",
+        "ExtractMail&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "KeySkill&Sequence_17",
+        "ResumesAttachment&Sequence_16",
+        "KeySkill&Sequence_1",
+        "FilePath&Sequence_1",
+        "Files&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Selection1_Rejection(2).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Delete&Sequence_2",
+        "ExtractMail&Sequence_1",
+        "CandidateName&Sequence_1",
+        "Pdf_Data&Sequence_2",
+        "FilePath&Sequence_1",
+        "Files&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Interview(3).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FilePath&Sequence_1",
+        "Files&Sequence_1",
+        "Salary&Sequence_1",
+        "DeadlineDate&Sequence_1",
+        "CandidateName&Sequence_1",
+        "MailAddress&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GoogleForm(4).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "variable1&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Onboarding(5).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "EmpDOB&Sequence_49",
+        "JoiningDate&Sequence_19",
+        "HR_Name&Sequence_1",
+        "IndividualFilePath&Sequence_1",
+        "IndividualFiles&Sequence_1",
+        "FileName&Sequence_1",
+        "Files&Sequence_1",
+        "FolderName&Sequence_1",
+        "FilePath&Sequence_1",
+        "EmpAddress&Sequence_1",
+        "EmpBlood&Sequence_1",
+        "EmpName&Sequence_1",
+        "EmpPhone&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "IDCard(6).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "BloodGroup&Sequence_1",
+        "NameExtract&Sequence_1",
+        "ph&Sequence_1",
+        "FilePath&Sequence_1",
+        "Files&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

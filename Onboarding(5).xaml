@@ -1,0 +1,709 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Trial" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1220,9386.4" sap2010:WorkflowViewState.IdRef="Trial_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Presentations.Activities</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Core.Activities.DateModifications</x:String>
+      <x:String>UiPath.Activities.System.Workflow.Business</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="This workflow is for the selected candidates. It focuses on the remaining onboarding documents. &#xA;&#xA;So that the HR team can print the papers without any trouble.&#xA;&#xA;" DisplayName="Onboarding_Documents" sap:VirtualizedContainerService.HintSize="1230.4,9321.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="EmpPhone" />
+      <Variable x:TypeArguments="x:String" Name="EmpName" />
+      <Variable x:TypeArguments="x:String" Name="EmpBlood" />
+      <Variable x:TypeArguments="x:String" Name="EmpAddress" />
+      <Variable x:TypeArguments="x:String" Default="Documents\Template\Onboarding_docs" Name="FilePath" />
+      <Variable x:TypeArguments="x:String" Name="FolderName" />
+      <Variable x:TypeArguments="s:String[]" Name="Files" />
+      <Variable x:TypeArguments="s:String[]" Name="FileName" />
+      <Variable x:TypeArguments="s:String[]" Name="IndividualFiles" />
+      <Variable x:TypeArguments="x:String" Default="Documents\Template\Onboarding_docs\Individual_Candidate" Name="IndividualFilePath" />
+      <Variable x:TypeArguments="x:String" Name="HR_Name" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1168,92.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="793.6,1868" sap2010:WorkflowViewState.IdRef="Sequence_18">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="731.2,1781.6" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+            <ueab:ExcelProcessScopeX.Body>
+              <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="697.6,1672" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="635.2,1585.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Documents\Contact Information (Responses).xlsx">
+                    <ueab:ExcelApplicationCard.Body>
+                      <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="601.6,1292.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="539.2,1206.4" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Form Responses 1&quot;)]" SaveAfterEachRow="False">
+                            <ueab:ExcelForEachRowX.Body>
+                              <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                                <ActivityAction.Argument1>
+                                  <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                                </ActivityAction.Argument1>
+                                <ActivityAction.Argument2>
+                                  <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                </ActivityAction.Argument2>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="505.6,991.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;Form Responses 1&quot;).Cell(&quot;B2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="443.2,200" sap2010:WorkflowViewState.IdRef="ReadCellValueX_1">
+                                    <ueab:ReadCellValueX.SaveTo>
+                                      <OutArgument x:TypeArguments="x:String">[EmpName]</OutArgument>
+                                    </ueab:ReadCellValueX.SaveTo>
+                                  </ueab:ReadCellValueX>
+                                  <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;Form Responses 1&quot;).Cell(&quot;G2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="443.2,200" sap2010:WorkflowViewState.IdRef="ReadCellValueX_2">
+                                    <ueab:ReadCellValueX.SaveTo>
+                                      <OutArgument x:TypeArguments="x:String">[EmpPhone]</OutArgument>
+                                    </ueab:ReadCellValueX.SaveTo>
+                                  </ueab:ReadCellValueX>
+                                  <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;Form Responses 1&quot;).Cell(&quot;I2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="443.2,200" sap2010:WorkflowViewState.IdRef="ReadCellValueX_3">
+                                    <ueab:ReadCellValueX.SaveTo>
+                                      <OutArgument x:TypeArguments="x:String">[EmpBlood]</OutArgument>
+                                    </ueab:ReadCellValueX.SaveTo>
+                                  </ueab:ReadCellValueX>
+                                  <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;Form Responses 1&quot;).Cell(&quot;F2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="443.2,200" sap2010:WorkflowViewState.IdRef="ReadCellValueX_4">
+                                    <ueab:ReadCellValueX.SaveTo>
+                                      <OutArgument x:TypeArguments="x:String">[EmpAddress]</OutArgument>
+                                    </ueab:ReadCellValueX.SaveTo>
+                                  </ueab:ReadCellValueX>
+                                  <ui:PowerPointApplicationScope Password="{x:Null}" DisplayName="Use PowerPoint Presentation" sap:VirtualizedContainerService.HintSize="443.2,104.8" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_2" PresentationPath="Documents\Template\Blue Modern Business ID Card.pptx">
+                                    <ui:PowerPointApplicationScope.Body>
+                                      <ActivityAction x:TypeArguments="ui:IPresentationQuickHandle">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="ui:IPresentationQuickHandle" Name="PowerPoint" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,2311.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:SavePresentationFileAs DisplayName="Save PowerPoint File As" FilePath="Documents\Template\Temp\ID_Card.pptx" sap:VirtualizedContainerService.HintSize="529.6,218.4" sap2010:WorkflowViewState.IdRef="SavePresentationFileAs_2" Presentation="[PowerPoint]" />
+                                          <ui:FindAndReplaceTextInPresentation NumberOfReplacements="{x:Null}" DisplayName="Replace Text in Presentation" sap:VirtualizedContainerService.HintSize="529.6,208.8" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextInPresentation_6" MatchCase="False" Presentation="[PowerPoint]" ReplaceAll="True" ReplaceWith="[EmpName]" SearchFor="Name" WholeWordsOnly="False" />
+                                          <ui:FindAndReplaceTextInPresentation NumberOfReplacements="{x:Null}" DisplayName="Replace Text in Presentation" sap:VirtualizedContainerService.HintSize="529.6,208.8" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextInPresentation_7" MatchCase="False" Presentation="[PowerPoint]" ReplaceAll="True" ReplaceWith="[EmpPhone]" SearchFor="hello@reallygreatsite.com" WholeWordsOnly="False" />
+                                          <ui:FindAndReplaceTextInPresentation NumberOfReplacements="{x:Null}" DisplayName="Replace Text in Presentation" sap:VirtualizedContainerService.HintSize="529.6,208.8" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextInPresentation_8" MatchCase="False" Presentation="[PowerPoint]" ReplaceAll="True" ReplaceWith="[EmpBlood]" SearchFor="+123-456-7890" WholeWordsOnly="False" />
+                                          <ui:FindAndReplaceTextInPresentation NumberOfReplacements="{x:Null}" DisplayName="Replace Text in Presentation" sap:VirtualizedContainerService.HintSize="529.6,208.8" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextInPresentation_9" MatchCase="False" Presentation="[PowerPoint]" ReplaceAll="True" ReplaceWith="[DateTime.Now.ToString(&quot;dd/mm/yyyy&quot;)]" SearchFor=" MM/DD/YYYY&#xA;" WholeWordsOnly="False" />
+                                          <ui:FindAndReplaceTextInPresentation NumberOfReplacements="{x:Null}" DisplayName="Replace Text in Presentation" sap:VirtualizedContainerService.HintSize="529.6,208.8" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextInPresentation_10" MatchCase="False" Presentation="[PowerPoint]" ReplaceAll="True" ReplaceWith="[EmpAddress]" SearchFor="Home" WholeWordsOnly="False" />
+                                          <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="529.6,696.8" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_2">
+                                            <umab:OutlookApplicationCard.Body>
+                                              <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                                                <ActivityAction.Argument>
+                                                  <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+                                                </ActivityAction.Argument>
+                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,515.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" Body="Hey buddy" BodyDocumentPath="Hi" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,403.2" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Update on Your Job Application Status" To="pranavsundar5039@gmail.com" UseDocumentAsBody="False">
+                                                    <umab:SendMailX.Files>
+                                                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                                        <InArgument x:TypeArguments="x:String">Documents\Template\Temp\ID_Card.pptx</InArgument>
+                                                      </scg:List>
+                                                    </umab:SendMailX.Files>
+                                                    <umab:SendMailX.HtmlBodyFromFile>
+                                                      <umabh:HtmlContentArgument FilePath="{x:Null}">
+                                                        <umabh:HtmlContentArgument.RuntimeImages>
+                                                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                        </umabh:HtmlContentArgument.RuntimeImages>
+                                                        <umabh:HtmlContentArgument.ValueMappings>
+                                                          <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                                        </umabh:HtmlContentArgument.ValueMappings>
+                                                      </umabh:HtmlContentArgument>
+                                                    </umab:SendMailX.HtmlBodyFromFile>
+                                                  </umab:SendMailX>
+                                                </Sequence>
+                                              </ActivityAction>
+                                            </umab:OutlookApplicationCard.Body>
+                                          </umab:OutlookApplicationCard>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ui:PowerPointApplicationScope.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:PowerPointApplicationScope>
+                                </Sequence>
+                              </ActivityAction>
+                            </ueab:ExcelForEachRowX.Body>
+                          </ueab:ExcelForEachRowX>
+                        </Sequence>
+                      </ActivityAction>
+                    </ueab:ExcelApplicationCard.Body>
+                  </ueab:ExcelApplicationCard>
+                </Sequence>
+              </ActivityAction>
+            </ueab:ExcelProcessScopeX.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ueab:ExcelProcessScopeX>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <Sequence sap:VirtualizedContainerService.HintSize="1168,9048" sap2010:WorkflowViewState.IdRef="Sequence_19">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="JoiningDate" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="1105.6,281.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Name of the HR" Title="HR Name">
+        <ui:InputDialog.Result>
+          <OutArgument x:TypeArguments="x:String">[HR_Name]</OutArgument>
+        </ui:InputDialog.Result>
+      </ui:InputDialog>
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="1105.6,281.6" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="[&quot;Joining Date of the Employee&quot;+Environment.NewLine+&quot;Should be in DD/MM/YYYY format&quot;]" Title="Date of Joining">
+        <ui:InputDialog.Result>
+          <OutArgument x:TypeArguments="x:String">[JoiningDate]</OutArgument>
+        </ui:InputDialog.Result>
+      </ui:InputDialog>
+      <uix:NApplicationCard sap2010:Annotation.AnnotationText="This sequence is to create individual folders of the new candidates containing various documents for the onboarding purposes." AttachMode="ByInstance" DisplayName="Use Application: Onboarding_docs" sap:VirtualizedContainerService.HintSize="1105.6,2344" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" ScopeGuid="2f76ceaf-e170-42d4-871a-de21f2156a06" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="800,1981.6" sap2010:WorkflowViewState.IdRef="Sequence_20">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="737.6,122.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:String[]">[Files]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(FilePath)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="737.6,1771.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+                <ueab:ExcelProcessScopeX.Body>
+                  <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="704,1660" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="641.6,1573.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" WorkbookPath="Documents\Contact Information (Responses).xlsx">
+                        <ueab:ExcelApplicationCard.Body>
+                          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,1280.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="545.6,1194.4" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_5" Range="[Excel.Sheet(&quot;Form Responses 1&quot;)]" SaveAfterEachRow="True">
+                                <ueab:ExcelForEachRowX.Body>
+                                  <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                                    <ActivityAction.Argument1>
+                                      <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                                    </ActivityAction.Argument1>
+                                    <ActivityAction.Argument2>
+                                      <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                    </ActivityAction.Argument2>
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,978.4" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ueab:ReadCellValueX Cell="[CurrentRow.ByField(&quot;Name&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="449.6,200" sap2010:WorkflowViewState.IdRef="ReadCellValueX_9">
+                                        <ueab:ReadCellValueX.SaveTo>
+                                          <OutArgument x:TypeArguments="x:String">[EmpName]</OutArgument>
+                                        </ueab:ReadCellValueX.SaveTo>
+                                      </ueab:ReadCellValueX>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,184" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[EmpName]" />
+                                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Individual_Candidate" sap:VirtualizedContainerService.HintSize="449.6,508" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" ScopeGuid="0c3eb9d3-4f16-4b3c-91a4-886df8c59a38" Version="V2">
+                                        <uix:NApplicationCard.Body>
+                                          <ActivityAction x:TypeArguments="x:Object">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="353.6,105.6" sap2010:WorkflowViewState.IdRef="CreateDirectory_4" Path="[&quot;C:\Users\prana\OneDrive\Documents\UiPath\HR_automation\Documents\Template\Onboarding_docs\Individual_Candidate\&quot;+EmpName]" />
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </uix:NApplicationCard.Body>
+                                        <uix:NApplicationCard.TargetApp>
+                                          <uix:TargetApp Area="-9, -9, 1938, 1038" FilePath="C:\Windows\explorer.exe" IconBase64="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" InformativeScreenshot="236467a5e9f31b070f40f46c108405fd.png" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='Individual_Candidate' /&gt;" Title="Individual_Candidate" />
+                                        </uix:NApplicationCard.TargetApp>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NApplicationCard>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ueab:ExcelForEachRowX.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ueab:ExcelForEachRowX>
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:ExcelApplicationCard.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ueab:ExcelApplicationCard>
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelProcessScopeX.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ueab:ExcelProcessScopeX>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-9, -9, 1938, 1038" Arguments="c:\users\prana\onedrive\documents\uipath\hr_automation\documents\template\onboarding_docs" FilePath="C:\Windows\explorer.exe" IconBase64="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" InformativeScreenshot="675398a0817231865c6063b63f537cdc.png" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='Onboarding_docs' /&gt;" Title="WhatsApp" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+      <uix:NApplicationCard sap2010:Annotation.AnnotationText="This to copy the Onboarding templates to the candidates folder individually&#xA;" AttachMode="ByInstance" DisplayName="Use Application: Onboarding_docs" sap:VirtualizedContainerService.HintSize="1105.6,1420" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" ScopeGuid="46647a9d-5584-40cc-883a-5f0917da88f5" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,1044.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="545.6,122.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:String[]">[Files]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(FilePath)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:ForEachFolderX DisplayName="For Each Folder in Folder" Folder="C:\Users\prana\OneDrive\Documents\UiPath\HR_automation\Documents\Template\Onboarding_docs\Individual_Candidate" sap:VirtualizedContainerService.HintSize="545.6,834.4" sap2010:WorkflowViewState.IdRef="ForEachFolderX_1" IncludeSubFolders="False" OrderBy="NameAscFirst" SkipFoldersWithoutPermission="False">
+                <ui:ForEachFolderX.Body>
+                  <ActivityAction x:TypeArguments="si:DirectoryInfo, x:Int32">
+                    <ActivityAction.Argument1>
+                      <DelegateInArgument x:TypeArguments="si:DirectoryInfo" Name="CurrentFolder" />
+                    </ActivityAction.Argument1>
+                    <ActivityAction.Argument2>
+                      <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                    </ActivityAction.Argument2>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,543.2" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="449.6,455.2" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[Files]">
+                        <ui:ForEach.Body>
+                          <ActivityAction x:TypeArguments="x:String">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,264.8" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:CopyFile ContinueOnError="{x:Null}" Destination="[CurrentFolder.ToString]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="353.6,178.4" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[currentItem]" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:ForEach.Body>
+                      </ui:ForEach>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachFolderX.Body>
+              </ui:ForEachFolderX>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 0, 1920, 1020" FilePath="C:\Windows\explorer.exe" IconBase64="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" InformativeScreenshot="7a997a40ab163b2b6bfb074760e9dd8f.png" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='Onboarding_docs' /&gt;" Title="Onboarding_docs" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Retrieve the Employee Details from the Responses excel sheet.&#xA;" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1105.6,4608.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_5">
+        <ueab:ExcelProcessScopeX.Body>
+          <ActivityAction x:TypeArguments="ui:IExcelProcess">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1072,4455.2" sap2010:WorkflowViewState.IdRef="Sequence_40">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1009.6,4368.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" WorkbookPath="Documents\Contact Information (Responses).xlsx">
+                <ueab:ExcelApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="976,4076" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="913.6,3989.6" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_6" Range="[Excel.Sheet(&quot;Form Responses 1&quot;)]" SaveAfterEachRow="True">
+                        <ueab:ExcelForEachRowX.Body>
+                          <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                            <ActivityAction.Argument1>
+                              <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                            </ActivityAction.Argument1>
+                            <ActivityAction.Argument2>
+                              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                            </ActivityAction.Argument2>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="880,3773.6" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:ReadCellValueX Cell="[CurrentRow.ByField(&quot;Name&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="817.6,200" sap2010:WorkflowViewState.IdRef="ReadCellValueX_10">
+                                <ueab:ReadCellValueX.SaveTo>
+                                  <OutArgument x:TypeArguments="x:String">[EmpName]</OutArgument>
+                                </ueab:ReadCellValueX.SaveTo>
+                              </ueab:ReadCellValueX>
+                              <ueab:ReadCellValueX Cell="[CurrentRow.ByField(&quot;Mobile Number&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="817.6,200" sap2010:WorkflowViewState.IdRef="ReadCellValueX_11">
+                                <ueab:ReadCellValueX.SaveTo>
+                                  <OutArgument x:TypeArguments="x:String">[EmpPhone]</OutArgument>
+                                </ueab:ReadCellValueX.SaveTo>
+                              </ueab:ReadCellValueX>
+                              <ueab:ReadCellValueX Cell="[CurrentRow.ByField(&quot;Blood Group&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="817.6,200" sap2010:WorkflowViewState.IdRef="ReadCellValueX_12">
+                                <ueab:ReadCellValueX.SaveTo>
+                                  <OutArgument x:TypeArguments="x:String">[EmpBlood]</OutArgument>
+                                </ueab:ReadCellValueX.SaveTo>
+                              </ueab:ReadCellValueX>
+                              <ueab:ReadCellValueX Cell="[CurrentRow.ByField(&quot;Residential Address&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="817.6,200" sap2010:WorkflowViewState.IdRef="ReadCellValueX_13">
+                                <ueab:ReadCellValueX.SaveTo>
+                                  <OutArgument x:TypeArguments="x:String">[EmpAddress]</OutArgument>
+                                </ueab:ReadCellValueX.SaveTo>
+                              </ueab:ReadCellValueX>
+                              <uix:NApplicationCard sap2010:Annotation.AnnotationText="Replace the deatails and prepare the documents for the employees." AttachMode="ByInstance" DisplayName="Use Application: Individual_Candidate" sap:VirtualizedContainerService.HintSize="817.6,2887.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_12" ScopeGuid="8a594f99-2802-4931-a83a-cf5e6b82c9dd" Version="V2">
+                                <uix:NApplicationCard.Body>
+                                  <ActivityAction x:TypeArguments="x:Object">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="784,2501.6" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:ForEachFolderX DisplayName="For Each Folder in Folder" Folder="C:\Users\prana\OneDrive\Documents\UiPath\HR_automation\Documents\Template\Onboarding_docs\Individual_Candidate" sap:VirtualizedContainerService.HintSize="721.6,2413.6" sap2010:WorkflowViewState.IdRef="ForEachFolderX_2" IncludeSubFolders="False" OrderBy="NameAscFirst" SkipFoldersWithoutPermission="False">
+                                        <ui:ForEachFolderX.Body>
+                                          <ActivityAction x:TypeArguments="si:DirectoryInfo, x:Int32">
+                                            <ActivityAction.Argument1>
+                                              <DelegateInArgument x:TypeArguments="si:DirectoryInfo" Name="CurrentFolder" />
+                                            </ActivityAction.Argument1>
+                                            <ActivityAction.Argument2>
+                                              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                            </ActivityAction.Argument2>
+                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,2122.4" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Assign sap:VirtualizedContainerService.HintSize="625.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="s:String[]">[IndividualFiles]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(IndividualFilePath)]</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="625.6,1912.8" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[IndividualFiles]">
+                                                <ui:ForEach.Body>
+                                                  <ActivityAction x:TypeArguments="x:String">
+                                                    <ActivityAction.Argument>
+                                                      <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+                                                    </ActivityAction.Argument>
+                                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,1722.4" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[IndividualFiles.ToString]" sap:VirtualizedContainerService.HintSize="529.6,1636" sap2010:WorkflowViewState.IdRef="WordApplicationScope_2">
+                                                        <p:WordApplicationScope.Body>
+                                                          <ActivityAction x:TypeArguments="ui:WordDocument">
+                                                            <ActivityAction.Argument>
+                                                              <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+                                                            </ActivityAction.Argument>
+                                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1503.2" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                                              <Sequence.Variables>
+                                                                <Variable x:TypeArguments="x:String" Name="EmpDOB" />
+                                                              </Sequence.Variables>
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="433.6,204.8" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" Replace="[HR_Name]" ReplaceAll="True" Search="HR_Name" />
+                                                              <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="433.6,204.8" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" Replace="[EmpName]" ReplaceAll="True" Search="EmpName" />
+                                                              <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="433.6,204.8" sap2010:WorkflowViewState.IdRef="WordReplaceText_4" Replace="Under HRD" ReplaceAll="True" Search="Dept" />
+                                                              <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="433.6,204.8" sap2010:WorkflowViewState.IdRef="WordReplaceText_5" Replace="Engineer Trainee" ReplaceAll="True" Search="Pos" />
+                                                              <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="433.6,204.8" sap2010:WorkflowViewState.IdRef="WordReplaceText_6" Replace="[JoiningDate]" ReplaceAll="True" Search="DtJoin" />
+                                                              <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="433.6,204.8" sap2010:WorkflowViewState.IdRef="WordReplaceText_7" Replace="[EmpDOB]" ReplaceAll="True" Search="DOB" />
+                                                              <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text in Document" sap:VirtualizedContainerService.HintSize="433.6,188" sap2010:WorkflowViewState.IdRef="WordReplaceText_8" Replace="[EmpBlood]" ReplaceAll="True" Search="BT" />
+                                                            </Sequence>
+                                                          </ActivityAction>
+                                                        </p:WordApplicationScope.Body>
+                                                      </p:WordApplicationScope>
+                                                    </Sequence>
+                                                  </ActivityAction>
+                                                </ui:ForEach.Body>
+                                              </ui:ForEach>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ui:ForEachFolderX.Body>
+                                      </ui:ForEachFolderX>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </uix:NApplicationCard.Body>
+                                <uix:NApplicationCard.TargetApp>
+                                  <uix:TargetApp Area="-9, -9, 1938, 1038" Arguments="c:\users\prana\onedrive\documents\uipath\hr_automation\documents\template\onboarding_docs\individual_candidate" FilePath="C:\Windows\explorer.exe" IconBase64="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" InformativeScreenshot="d1f9da6a0755ddb3d3b5c1c197f6ba38.png" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='Individual_Candidate' /&gt;" Title="Individual_Candidate" />
+                                </uix:NApplicationCard.TargetApp>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NApplicationCard>
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:ExcelForEachRowX.Body>
+                      </ueab:ExcelForEachRowX>
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelApplicationCard.Body>
+              </ueab:ExcelApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelProcessScopeX.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ueab:ExcelProcessScopeX>
+    </Sequence>
+  </Sequence>
+</Activity>
